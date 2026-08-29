@@ -1,0 +1,5 @@
+print("===== TO-DO LIST =====")
+print("1. Add Task")
+print("2. Remove Task")
+print("3. View Tasks")
+print("4. Exit")
