@@ -3,14 +3,32 @@ print("1. Add Task")
 print("2. Remove Task")
 print("3. View Task")
 print("4. Exit")
+tasks = []
 choice = input("Enter your choice: ")
 
+if choice == "1":
+    print("\n--- Add New Task ---")
+    task = input("Enter task name: ")      
+
+    if task:
+        print("Task added successfully!")
+    else:
+        print("Task cannot be empty.")
 if choice == "1":
     print("\n--- Add New Task ---")
     task = input("Enter task name: ")
 
     if task:
-        task.append(task)
+        tasks.append(task)
         print("Task added successfully!")
     else:
         print("Task cannot be empty.")
+elif choice == "3":
+    print("\nYour Tasks:")
+
+    if not tasks:
+        print("No tasks added yet.")
+    else:
+        for i, task in enumerate(tasks, 1):
+            print(i, ".", task)   
+    
